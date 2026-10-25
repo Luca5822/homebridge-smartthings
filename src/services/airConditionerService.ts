@@ -245,6 +245,7 @@ export class AirConditionerService extends BaseService {
     switch (fanOscillationMode) {
       case FanOscillationMode.All:
       case FanOscillationMode.Vertical:
+      case "horizontal":
         return this.platform.Characteristic.SwingMode.SWING_ENABLED;
       case FanOscillationMode.Fixed:
         return this.platform.Characteristic.SwingMode.SWING_DISABLED;
