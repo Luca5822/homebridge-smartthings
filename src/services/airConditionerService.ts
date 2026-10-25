@@ -511,7 +511,6 @@ export class AirConditionerService extends BaseService {
   }
 
   private async getDeviceStatus(): Promise<any> {
-    this.multiServiceAccessory.forceNextStatusRefresh();
     if (!await this.getStatus()) {
       throw new this.platform.api.hap.HapStatusError(this.platform.api.hap.HAPStatus.SERVICE_COMMUNICATION_FAILURE);
     }
